@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: azure;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    margin-top: 2rem;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border-color: aqua;   
+}
+button{
+    margin-top: 1rem;
+    width: 5rem;
+    height: 2rem;
+    background-color: rgb(189, 4, 226);
+    color: rgb(206, 250, 7);
+    border-radius: 10px;
+    
+}

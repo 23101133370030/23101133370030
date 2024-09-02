@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(249, 6, 6);
+    height: 100vh;
+}
+form{
+    display: flex;
+   flex-direction:column ;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(249, 151, 5);
+   width: 70%;
+   height: 20rem;
+
+
+}
+input{
+    height: 2rem;
+    background: yellow;
+    color: blue;
+    border-radius: 10px;
+    border-color: blueviolet;
+}
+button{
+    background-color: blue;
+    height: 2rem;
+    width: 4rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    border: none;
+    color: aqua;
+}
+button:hover{
+    background-color: brown;
+    color: rgb(220, 223, 220);
+    border: yellow solid;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
