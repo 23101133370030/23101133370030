@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: oldlace;
+    height: 100vh;
+}
+h1{
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    color: rgb(68, 3, 128);
+    font-size: 3rem;
+}
+.r{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(124, 241, 124);
+    height: 2.5rem;
+}
+a{
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+a:hover{
+    background-color:rgb(212, 144, 18);
+    color: green;
+    border-radius: 6px;
+}
+main{
+    display: flex;
+}
+.j{
+    width: 50%;
+    height: 30rem;
+}
+.j img{
+    height: 90%;
+    width: 90%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+.j1{
+    width: 50%;
+}
+.j1 h2{
+    display: flex;
+    justify-content: center;
+    color: green;
+    margin-top: 2rem;
+}
+.j1 p{
+    margin-top: 1rem;
+    font-size:1.5rem;
+    margin-right: 1rem;
+}
+section{
+    display: flex;
+    background-color: green;
+}
+.d{
+    width: 40%;
+    height: 35rem;
+}
+.d img{
+    height: 80%;
+    width: 94%;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+}
+.d1{
+    width: 60%;
+    height: 35rem;
+}
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: oldlace;
+    font-size: 1.5rem;
+}
+h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: oldlace; 
+    font-size: 1.5rem; 
+}
+h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: oldlace;
+    font-size: 1.5rem;
+}
+.jr img{
+    width: 90%;
+    height:13rem;
+    margin-left: 2rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+.jd img{
+    width: 90%;
+    height:12.5rem;
+    margin-left: 2rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+section p{
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+footer{
+    display: flex;
+    background-color: rgb(96, 231, 96);
+    height: 3rem;
+}
+.j2{ 
+    width: 50%;
+}
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.R:hover{
+    background-color: green;
+    color: oldlace;
+    width: 10rem;
+    border-radius: 7px;
+}
