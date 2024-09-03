@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.W{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 58, 168);
+    height: 100%;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+input{
+    height: 3rem;
+    margin-top: 1rem;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+}
+button{
+    margin-top: 1rem;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 6px;
+}
+button:hover{
+    background-color: green;
+    color: goldenrod;
+}
