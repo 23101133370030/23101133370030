@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "kilimo_company_limited";
+$dbname = "passenger_management";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, name, email, phone, address FROM farmers";
+$sql = "SELECT id, name, email, phone, destination FROM passengers";
 $result = $conn->query($sql);
 ?>
 
@@ -21,7 +21,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KILIMO COMPANY LIMITED</title>
+    <title>Passenger Management</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -77,15 +77,15 @@ $result = $conn->query($sql);
 </head>
 <body>
     <div class="container">
-        <h2>Farmers Management</h2>
-        <a href="create.php" class="btn">Add New Farmer</a>
+        <h2>Passenger Management</h2>
+        <a href="create.php" class="btn">Add New Passenger</a>
         <table>
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>address</th>
+                    <th>Destination</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -97,7 +97,7 @@ $result = $conn->query($sql);
                                 <td>{$row['name']}</td>
                                 <td>{$row['email']}</td>
                                 <td>{$row['phone']}</td>
-                                <td>{$row['address']}</td>
+                                <td>{$row['destination']}</td>
                                 <td>
                                     <a href='update.php?id={$row['id']}'>Edit</a> |
                                     <a href='delete.php?id={$row['id']}' class='btn btn-danger'>Delete</a>
@@ -105,7 +105,7 @@ $result = $conn->query($sql);
                               </tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='5'>No farmer found</td></tr>";
+                    echo "<tr><td colspan='5'>No passengers found</td></tr>";
                 }
                 $conn->close();
                 ?>

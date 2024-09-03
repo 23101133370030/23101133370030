@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "kilimo_company_limited";
+$dbname = "passenger_management";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $address = $_POST['address'];
+    $destination = $_POST['destination'];
 
-    $sql = "INSERT INTO farmers (name, email, phone, adddress)
-            VALUES ('$name', '$email', '$phone', '$address')";
+    $sql = "INSERT INTO passengers (name, email, phone, destination)
+            VALUES ('$name', '$email', '$phone', '$destination')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php");
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a Farmer</title>
+    <title>Create Passenger</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <h2>Create New Farmer</h2>
+        <h2>Create New Passenger</h2>
         <form action="" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -96,10 +96,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label for="address">address:</label>
-            <input type="text" id="address" name="address" required>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
 
-            <button type="submit">Add Farmer</button>
+            <button type="submit">Add Passenger</button>
         </form>
     </div>
 </body>

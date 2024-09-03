@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "kilimo_company_limited";
+$dbname = "passenger_management";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $id = $_GET['id'];
-$sql = "DELETE FROM farmers WHERE id=$id";
+$sql = "DELETE FROM passengers WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: index.php");

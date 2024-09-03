@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "kilimo_company_limited";
+$dbname = "passenger_management";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $address = $_POST['address'];
+    $destination = $_POST['destination'];
 
-    $sql = "UPDATE farmers SET name='$name', email='$email', phone='$phone', address='$address' WHERE id=$id";
+    $sql = "UPDATE passengers SET name='$name', email='$email', phone='$phone', destination='$destination' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php");
@@ -30,9 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 } else {
     $id = $_GET['id'];
-    $sql = "SELECT id, name, email, phone, address FROM farmers WHERE id=$id";
+    $sql = "SELECT id, name, email, phone, destination FROM passengers WHERE id=$id";
     $result = $conn->query($sql);
-    $farmers = $result->fetch_assoc();
+    $passenger = $result->fetch_assoc();
 }
 ?>
 
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Farmers</title>
+    <title>Update Passenger</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -90,23 +90,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <h2>Update Farmers</h2>
+        <h2>Update Passenger</h2>
         <form action="" method="POST">
-            <input type="hidden" name="id" value="<?php echo $farmers['id']; ?>">
+            <input type="hidden" name="id" value="<?php echo $passenger['id']; ?>">
 
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="<?php echo $farmers['name']; ?>" required>
+            <input type="text" id="name" name="name" value="<?php echo $passenger['name']; ?>" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?php echo $farmers['email']; ?>" required>
+            <input type="email" id="email" name="email" value="<?php echo $passenger['email']; ?>" required>
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" value="<?php echo $farmers['phone']; ?>" required>
+            <input type="tel" id="phone" name="phone" value="<?php echo $passenger['phone']; ?>" required>
 
-            <label for="address">address:</label>
-            <input type="text" id="address" name="address" value="<?php echo $farmers['addresss']; ?>" required>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" value="<?php echo $passenger['destination']; ?>" required>
 
-            <button type="submit">Update Farmers</button>
+            <button type="submit">Update Passenger</button>
         </form>
     </div>
 </body>
